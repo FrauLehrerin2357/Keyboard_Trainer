@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Notenfinder – Klaviertöne üben</title>
+    <script type="module" crossorigin src="/assets/index-DtXDZki8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B4GTxw-L.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Dein Musiktraining</p>
+          <h1>Notenfinder</h1>
+          <p class="subtitle">Finde die passende Taste zur Note im Violinschlüssel.</p>
+        </div>
+        <section class="practice-stats" aria-label="Übungsstatistik">
+          <div class="stat-card">
+            <span>Gelöst</span>
+            <strong id="solved-count">0</strong>
+          </div>
+          <div class="stat-card stat-card--correct">
+            <span>Richtig</span>
+            <strong id="correct-count">0</strong>
+          </div>
+          <div class="stat-card stat-card--wrong">
+            <span>Falsch</span>
+            <strong id="wrong-count">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>Trefferquote</span>
+            <strong id="accuracy">0%</strong>
+          </div>
+        </section>
+      </header>
+
+      <section class="practice-card" aria-labelledby="round-heading">
+        <div class="round-header">
+          <div>
+            <p class="eyebrow">Dauertraining</p>
+            <h2 id="round-heading">Welche Taste ist das?</h2>
+          </div>
+          <p class="question-count" id="question-count" aria-live="polite"></p>
+        </div>
+
+        <div class="staff-panel">
+          <div id="staff" class="staff" role="img"
+               aria-label="Notenzeile im Violinschlüssel"></div>
+        </div>
+
+        <div class="answer-area">
+          <div class="keyboard-label-controls" role="group" aria-label="Beschriftung der Tasten">
+            <button type="button" data-label-mode="none" aria-pressed="false">
+              Ohne Beschriftung
+            </button>
+            <button type="button" data-label-mode="white" aria-pressed="false">
+              Nur weiße Tasten
+            </button>
+            <button type="button" data-label-mode="all" aria-pressed="true">
+              Alle Beschriftungen
+            </button>
+          </div>
+          <div id="keyboard" class="keyboard" aria-label="Klaviertastatur"></div>
+          <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <p class="range-note">Übungsbereich: c' bis h'' · inklusive Kreuzvorzeichen</p>
+    </main>
+  </body>
+</html>
